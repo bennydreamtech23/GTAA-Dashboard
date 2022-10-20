@@ -1,0 +1,113 @@
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+
+*{
+  box-sizing: border-box;
+}
+
+  
+body {
+    font-size: 15pt;
+    background-color:#D0D490;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+html, body {
+    overflow-x:hidden;
+    width:100%; 
+    margin: 0;
+    padding: 0;
+}
+
+/*navbar styles */
+ nav{
+   background-color: #27325A;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ }
+
+#logo-title{
+  font-weight: bolder;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+/*heading*/
+
+#heading2{
+  font-size: 21px;
+}
+
+#heading3{
+  font-size: 19px;
+}
+/*hero section*/
+
+.wrapper{
+  height: 50vh;
+    background: #000;
+    background: url("./assests/2739.jpg");
+    background-size: cover;
+    width: 100%;
+    color: white;
+}
+
+.overlay{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+}
+
+
+.wrapper:hover{
+  opacity: 0.7;
+  background-color: #27425A;
+}
+
+#btn01{
+  margin-top: 100px;
+  background-color:#87AE3E;
+  display: block;
+  width: 100%;
+  font-weight: bolder;
+  color: white;
+  font-size: 30px;
+}
+
+#btn{
+  background-color:#87AE3E;
+  color: white;
+  font-weight: bold;
+}
+
+/*section2*/
+.section2{
+    background: #000;
+    background: url("./assests/2411.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+}
+
+#card-terminal{
+  border-top: 5px solid #39CDBD;
+}
+
+.footer{
+  background-color: #27325A;
+}
+
+.footer1{
+  background-color:black;
+}
+@media only screen and (max-width:768px){
+  
+  html, body {
+    overflow-x:hidden;
+    width:100%; 
+    margin: 0;
+    padding: 0;
+}
+
+}

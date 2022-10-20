@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>GTAA- Passenger Wait Time Dashboard</title>
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+</head>
+<body>
+        <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+          
+       <div class="container-fluid"> 
+    <a class="navbar-brand me-5" href="./index.html" id="logo-title">
+    GTAA
+    </a>
+    
+    <button class="navbar-toggler"
+    type="button"
+    data-bs-toggle="collapse" 
+    data-bs-target="#navbarNav"
+    aria-controls="navbarNav"
+    aria-expanded="false" 
+    aria-label="Toggle navigation"> 
+    <span class="navbar-toggler-icon">
+    </span>
+    </button> 
+    
+    <div class="collapse navbar-collapse" id="navbarNav"> 
+    <ul class="navbar-nav"> 
+    <li class="nav-item">
+       <a class="nav-link" aria-current="page" 
+       href="#flights" id="nav-link">Flights</a> 
+       </li> 
+       
+    <li class="nav-item"> 
+    <a class="nav-link" href="#services" id="nav-link">Services & Facilities</a>
+    </li> 
+    
+    <li class="nav-item"> 
+    <a class="nav-link" href="#guildelines" id="nav-link">Travel guidelines</a>
+    </li> 
+    
+        <li class="nav-item"> 
+    <a class="nav-link" href="#terminal-maps" id="nav-link">Terminal Maps</a> 
+    </li>
+    
+    <li class="nav-item"> 
+    <a class="nav-link" href="#transport" id="nav-link">Transport</a> 
+    </li>
+    
+        <li class="nav-item"> 
+    <a class="nav-link" href="#lost&found" id="nav-link">Lost & Found</a> 
+    </li>
+    
+        <li class="nav-item"> 
+    <a class="nav-link" href="#manage-book" id="nav-link">Manage My Booking</a> 
+    </li>
+    
+    </ul> 
+    </div>
+    </div> 
+    </nav>
+</header>
+    
+    <main>
+<!--hero section-->
+
+  <section class="py-5 text-center container-fluid" id="hero-section">
+    <article class="wrapper">
+      <div class="overlay">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <button  class="btn shadow-lg" id = "btn01">GTAA AIRPORT WAIT TIME DASHBOARD</button>
+      </div>
+    </div>
+    </div>
+    </article>
+  </section>
+
+<!--section2-->
+
+<section id="flights" class="container-fluid" data-aos="fade-up-right">
+    <h2 class="text-muted text-center" id="heading2">What Type of passenger are you</h2>
+        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+          
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">
+              <i class="bi bi-airplane-engines-fill"></i>
+              Transit
+              </h4>
+          </div>
+          <div class="card-body">
+            <button type="button" 
+            class="w-100 btn btn-lg" id="btn">
+              Read More
+              </button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">
+              <i class="bi bi-airplane"></i>
+              Arrival
+              </h4>
+          </div>
+          
+          <div class="card-body">
+            <ul class="list-unstyled mt-3 mb-4 d-flex d-inline-flex justify-content-between">
+              <li class="me-2">
+              <input type="radio" class="form-check-input">
+              <label class="form-check-label">Yesterday</label>
+              </li>
+              
+              <li class="me-2">
+                <input type="radio" class="form-check-input">
+              <label class="form-check-label">Today</label>
+              </li>
+              
+              <li>
+                <input type="radio" class="form-check-label">
+              <label class="form-check-label">Tomorrow</label>
+              </li>
+            </ul>
+     
+         <input type="text" placeholder="Search by flight number" class="form-control">
+            <button type="button" class="w-100 btn btn-lg mt-3" id="btn">View all arrival flights</button>
+          </div>
+        </div>
+      </div>
+      
+       <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Departure</h4>
+          </div>
+          <div class="card-body">
+                    <ul class="list-unstyled mt-3 mb-4 d-flex d-inline-flex justify-content-between">
+              <li class="me-2">
+              <input type="radio" class="form-check-input">
+              <label class="form-check-label">Yesterday</label>
+              </li>
+              
+              <li class="me-2">
+                <input type="radio" class="form-check-input">
+              <label class="form-check-label">Today</label>
+              </li>
+              
+              <li>
+                <input type="radio" class="form-check-label">
+              <label class="form-check-label">Tomorrow</label>
+              </li>
+            </ul>
+         <input type="text" placeholder="Search by flight number" class="form-control">
+     
+            <button type="button" class="w-100 btn btn-lg mt-3" id="btn">View all departed flights</button>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<!--section2-->
+
+<section id="services" class="container-fluid" data-aos="fade-up-left">
+  <article class ="section2">
+    <div class="overlay">
+    <h2 class="text-center text-white" id="heading2">Services And Facilities</h2>
+        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+          
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">
+              <i class="bi bi-stopwatch-fill h1"></i>
+              </h4>
+          </div>
+          <div class="card-body">
+            <h3>Fast-Track Services</h3>
+            <button type="button" 
+            class="w-100 btn btn-lg" id="btn">
+             Learn More
+              </button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">
+             <i class="bi bi-wifi h1"></i>
+              </h4>
+          </div>
+          
+          <div class="card-body">
+           <h3>Stay Connected With Free Wifi</h3>
+            <button type="button" class="w-100 btn btn-lg mt-3" id="btn">Learn More</button>
+          </div>
+        </div>
+      </div>
+      
+       <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">
+        <i class="bi bi-cash-coin h1"></i>
+            </h4>
+          </div>
+          <div class="card-body">
+           <h3>Currency Exchange</h3>
+            <button type="button" class="w-100 btn btn-lg mt-3" id="btn">Learn More</button>
+            
+          </div>
+        </div>
+      </div>
+      
+        <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">
+              <i class="bi bi-car-front-fill h1"></i>
+            </h4>
+          </div>
+          <div class="card-body">
+           <h3>Transport Services</h3>
+            <button type="button" class="w-100 btn btn-lg mt-3" id="btn">Learn More</button>
+            
+          </div>
+        </div>
+      </div>
+      
+      
+    </div>
+    </div>
+</article>
+</section>
+
+<!--section3-->
+
+<section id="guildelines" class="container-fluid mt-5" >
+  <article>
+    <h2 class="text-center text-dark mb-3" id="heading2">Explore new ways to keep you happy while waiting</h2>
+    
+        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+          
+      <div class="col" data-aos="flip-left">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">
+             Shop
+              </h4>
+          </div>
+          <div class="card-body">
+            <img src="./assests/15.jpg" alt="shopping-pic" class="img-thumbnail" loading="lazy">
+            
+            <p>
+             We want your waiting to be lovely and stress free. 
+            We have amazing and various Shops outlet to visit while waiting.
+            </p>
+            <button type="button" 
+            class="w-100 btn btn-lg" id="btn">
+             More Update
+              </button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col" data-aos="flip-right">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">
+            Dine
+              </h4>
+          </div>
+          
+          <div class="card-body">
+           <img src="./assests/2107.q702.020.S.m005.c10.canteen queue.jpg" 
+           alt="shopping-pic" 
+           class="img-thumbnail" 
+           loading="lazy">
+           
+           <p>
+          We want your waiting to be lovely and stress free. 
+            We have amazing and various places to eat
+            and restaurants to eat appetizing food while waiting
+           </p>
+            <button type="button" class="w-100 btn btn-lg mt-3" id="btn">Learn More</button>
+          </div>
+        </div>
+      </div>
+      
+            <div class="col" data-aos="flip-left">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">
+            Unwind
+              </h4>
+          </div>
+          
+          <div class="card-body">
+           <img src="./assests/service_02.jpg" 
+           alt="shopping-pic" 
+           class="img-thumbnail" 
+           loading="lazy">
+           
+           <p>
+          We want your waiting to be lovely and stress free. 
+            We want you to feel free and relax be yourself while waiting.
+            we have <br>
+            <strong style="color:#39CDBD;">NO DISCRIMINATION POLICY</strong>
+           </p>
+            <button type="button" class="w-100 btn btn-lg mt-3" id="btn">Learn More</button>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+</article>
+</section>
+
+
+<!--section4-->
+<section id="transport" class="container-fluid">
+  <article class="section2">
+    <div class="overlay">
+    <h2 class="text-center text-white" id="heading2">
+      Explore new ways to spend your time
+      </h2>
+    
+        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+          
+      <div class="col" data-aos="zoom-in">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">
+             Airport Lounge
+              </h4>
+          </div>
+          <div class="card-body">
+            <img src="./assests/2411.jpg" alt="shopping-pic" class="img-thumbnail" loading="lazy">
+            
+            <p>
+           Relax while waiting, with our amzing and cool lounge
+            </p>
+            <button type="button" 
+            class="w-100 btn btn-lg" id="btn">
+             More Update
+              </button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col" data-aos="zoom-in-up">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">
+            Family Services
+              </h4>
+          </div>
+          
+          <div class="card-body">
+           <img src="./assests/Parents and kids having photo session in studio.jpg" 
+           alt="shopping-pic" 
+           class="img-thumbnail" 
+           loading="lazy">
+           
+           <p>
+          We want your places for Nursing Mom and Kids Lounge, 
+          so that you can keep your kid busy while waiting
+           </p>
+            <button type="button" class="w-100 btn btn-lg mt-3" id="btn">Learn More</button>
+          </div>
+        </div>
+      </div>
+      
+            <div class="col" data-aos="zoom-in-down">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">
+            Prayer Room
+              </h4>
+          </div>
+          
+          <div class="card-body">
+           <img src="./assests/1807_i301_029_s.jpg" 
+           alt="shopping-pic" 
+           class="img-thumbnail" 
+           loading="lazy">
+           
+           <p>
+          We want you to free we have no issue with your religion. we have a prayer room for all religious activities.
+           </p>
+            <button type="button" class="w-100 btn btn-lg mt-3" id="btn">Learn More</button>
+          </div>
+        </div>
+      </div>
+     </div>
+    </div>
+</article>
+</section>
+
+
+<!--section5-->
+<section id="lost&found" class="container-fluid mt-5">
+  <article>
+    <h2 class="text-center text-dark" id="heading2">
+      What to See More
+      </h2>
+    
+        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+          
+      <div class="col" data-aos="zoom-out-up">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">
+             Explore the Airport
+              </h4>
+          </div>
+          <div class="card-body">
+            <img src="./assests/2411.jpg" alt="shopping-pic" class="img-thumbnail" loading="lazy">
+            
+            <p>
+           Feel free to explore the airport and check out the airport. we have mouth watering things to buy, eat and see.
+            </p>
+            <button type="button" 
+            class="w-100 btn btn-lg" id="btn">
+             More Update
+              </button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col" data-aos="zoom-out-left">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">
+            Explore the City
+              </h4>
+          </div>
+          
+          <div class="card-body">
+           <img src="./assests/Parents and kids having photo session in studio.jpg" 
+           alt="shopping-pic" 
+           class="img-thumbnail" 
+           loading="lazy">
+           
+           <p>
+         It a lovely cities were our airports are located, be free to check out the city and see what you can buy, eat and mingle with the people while waiting
+           </p>
+            <button type="button" class="w-100 btn btn-lg mt-3" id="btn">Learn More</button>
+          </div>
+        </div>
+      </div>
+      
+       <div class="col" data-aos="zoom-out-right">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">
+            Explore the Maps For Amazing Places To Visit
+              </h4>
+          </div>
+          
+          <div class="card-body">
+           <img src="./assests/2739.jpg" 
+           alt="lanscape of the airport" 
+           class="img-thumbnail" 
+           loading="lazy">
+           
+           <p>
+         Check out resort areas, hotels and restaurants in the city you are traveling to. we want you to have the best time in our country and destination countries.
+           </p>
+            <button type="button" class="w-100 btn btn-lg mt-3" id="btn">Learn More</button>
+          </div>
+        </div>
+      </div>
+     </div>
+</article>
+</section>
+
+<!--section5-->
+<section id="terminal-maps">
+  <div class="album py-5 bg-light">
+    <div class="container-fluid">
+      
+      <h2 class="text-center" id="heading2"> 
+      Terminal Maps
+      </h2>
+      <h2 id="heading2">Terminal1</h2>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        
+        <div class="col">
+          <div class="card shadow-sm" id="card-terminal">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center">
+                
+                <div class="card-text">
+                <h3 class="card-text" id="heading3">
+                ONTARIO
+                </h3>
+                <p class="card-text">
+                  10 Minutes
+                  </p>
+                  </div>
+                  
+                <div class="btn-group">
+                  <button type="button" id="btn" class="btn btn-sm">Normal</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col">
+          <div class="card shadow-sm" id="card-terminal">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="card-text">
+                <h3 class="card-text" id="heading3">
+                WEST OF TORONTO
+                </h3>
+                <p class="card-text">
+                  0 Minutes
+                  </p>
+                  </div>
+                  
+                <div class="btn-group">
+                  <button type="button" id="btn" class="btn btn-sm">Normal</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+           <div class="col">
+          <div class="card shadow-sm" id="card-terminal">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="card-text">
+                <h3 class="card-text" id="heading3">
+                CANADA
+                </h3>
+                <p class="card-text">
+                  10 Minutes
+                  </p>
+                  </div>
+                  
+                <div class="btn-group">
+                  <button type="button" id="btn" class="btn btn-sm">Normal</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        
+   <h2 id="heading2" class="mt-3">Terminal3</h2>
+         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+ 
+        <div class="col">
+          <div class="card shadow-sm" id="card-terminal">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center">
+                
+                <div class="card-text">
+                <h3 class="card-text" id="heading3">
+                ONTARIO
+                </h3>
+                <p class="card-text">
+                  5 Minutes
+                  </p>
+                  </div>
+                  
+                <div class="btn-group">
+                  <button type="button" id="btn" class="btn btn-sm">Normal</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col">
+          <div class="card shadow-sm" id="card-terminal">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="card-text">
+                <h3 class="card-text" id="heading3">
+                WEST OF TORONTO
+                </h3>
+                <p class="card-text">
+                  0 Minutes
+                  </p>
+                  </div>
+                  
+                <div class="btn-group">
+                  <button type="button" id="btn" class="btn btn-sm">Normal</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+           <div class="col">
+          <div class="card shadow-sm" id="card-terminal">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="card-text">
+                <h3 class="card-text" id="heading3">
+                CANADA
+                </h3>
+                <p class="card-text">
+                  10 Minutes
+                  </p>
+                  </div>
+                  
+                <div class="btn-group">
+                  <button type="button" id="btn" class="btn btn-sm">Normal</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+    </div>
+  </div>
+</section>
+       
+       <!--section7-->
+
+      
+      <section id="section-7" class="container-fluid">
+      <h2 id="heading2">Airline Check-in</h2>
+      <div class="table-responsive p-3">
+        <table class="table table-striped table-sm">
+          <thead>
+            <tr>
+              <th scope="col">Station</th>
+              <th scope="col">Time</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Aer Lingus</td>
+              <td>3 Minutes</td>
+              <td>Normal</td>
+            </tr>
+            
+            <tr>
+              <td>AeroMexico</td>
+              <td>0 Minutes</td>
+              <td>Counter Closed</td>
+            </tr>
+            
+            <tr>
+              <td>Air Canada</td>
+              <td>5 Minutes</td>
+              <td>Normal</td>
+            </tr>
+            
+            <tr>
+              <td>Air France</td>
+              <td>20 Minutes</td>
+              <td>Normal</td>
+            </tr>
+            
+            <tr>
+              <td>Air India</td>
+              <td>0 Minutes</td>
+              <td>Counter Closed</td>
+            </tr>
+            
+            <tr>
+              <td>Air Transit</td>
+              <td>5 Minutes</td>
+              <td>Normal</td>
+            </tr>
+            
+            <tr>
+              <td>Air Ontario</td>
+              <td>20 Minutes</td>
+              <td>Normal</td>
+            </tr>
+            
+            <tr>
+              <td>Air of West of Toronto</td>
+              <td>0 Minutes</td>
+              <td>Counter Close</td>
+            </tr>
+            
+            <tr>
+              <td>EVA Air</td>
+              <td>10 Minutes</td>
+              <td>Normal</td>
+            </tr>
+            
+            
+            <tr>
+              <td>Korean Air</td>
+              <td>0 Minutes</td>
+              <td>Normal</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      </section>
+    </main>
+    
+    <footer class="text-muted py-5" id ="manage-book">
+      <div class="container-fluid p-3 footer">
+        <h2 class="text-white" id="heading2">Subscribe to our newsletter</h2>
+        
+        <p class="text-white">To receive special offers & airport news by email!</p>
+        
+        <input type="text" class="form-control mb-2">
+        <button type="submit" class="btn btn-lg w-100" id="btn">Submit</button>
+      </div>
+      
+  <div class="container-fluid p-3">
+    <p class="mb-1">Great exclusive deals on our products!</p>
+    
+    <p class="mb-0">Book Flights, Flight Status, Search Hotels Domestic Flights, International Flights Holiday Packages, Visa Assistance, Travel Card etc
+    </p>
+    
+     <p class="mt-1 me-2">
+       Follow us: 
+       <i class="bi bi-twitter lead"></i>
+       <i class="bi bi-whatsapp lead"></i>
+       <i class="bi bi-instagram"></i>
+     </p>
+     
+      <p class="float-end mb-1">
+      <a href="#">Back to top</a>
+    </p>
+  </div>
+</footer>
+ 
+  <!-- scripts -->
+  
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      offset:400,
+      duration:1000
+    });
+  </script>
+  
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  
+    <script src="main.js"></script>
+</body>
+</html>
