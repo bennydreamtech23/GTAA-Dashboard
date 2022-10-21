@@ -9,7 +9,7 @@ function bodyModal(){
     button: "Aww yiss!",
   });
 }
-//bodyModal()
+bodyModal()
 
 //alert(bodyModal())
 
